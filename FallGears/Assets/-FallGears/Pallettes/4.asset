@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6464565c3370694a8842d436ab71baa, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  Main: {r: 0.92549026, g: 0.10588236, b: 0.29411766, a: 1}
+  MainDark: {r: 0.49056602, g: 0.08098966, b: 0.17505494, a: 0}
+  MainHighlight: {r: 1, g: 0.5613208, b: 0.6620699, a: 0}
+  Secondary: {r: 0.9490197, g: 0.4156863, b: 0.26666668, a: 1}
+  SecondaryDark: {r: 0.5660378, g: 0.2008323, b: 0.09878961, a: 0}
+  SecondaryHighlight: {r: 0.9811321, g: 0.7026021, b: 0.6247775, a: 0}
+  Obstacles: {r: 0.9686275, g: 0.8588236, b: 0.41176474, a: 1}
+  ObstaclesDark: {r: 0.5, g: 0.42791656, b: 0.13443395, a: 0}
+  ObstaclesHighlight: {r: 0.9433962, g: 0.8810964, b: 0.6274475, a: 0}

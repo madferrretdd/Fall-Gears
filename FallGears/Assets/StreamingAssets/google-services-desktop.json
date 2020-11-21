@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "70880418441",
+    "firebase_url": "https://starship-48396.firebaseio.com",
+    "project_id": "starship-48396",
+    "storage_bucket": "starship-48396.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70880418441:android:8c0e5d64b11b30c8174458",
+        "android_client_info": {
+          "package_name": "com.madferret.starship"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70880418441-0vpnfvm65o97fnsijlg7oaeps5pd6bah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHDerEKnHOjxei7j-Ee6m524jafA3coKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70880418441-0vpnfvm65o97fnsijlg7oaeps5pd6bah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
