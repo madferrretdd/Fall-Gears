@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://fallgears.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">789145253193</string>
+  <string name="google_storage_bucket" translatable="false">fallgears.appspot.com</string>
+  <string name="project_id" translatable="false">fallgears</string>
+  <string name="google_api_key" translatable="false">AIzaSyDX9Tk7L0NkU-yA9xyr1LWqxC7zjTieTyU</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDX9Tk7L0NkU-yA9xyr1LWqxC7zjTieTyU</string>
+  <string name="google_app_id" translatable="false">1:789145253193:android:a62beebada13a58ee3d698</string>
+  <string name="default_web_client_id" translatable="false">789145253193-30m0jfkk4l0am1rrfptjvnrvo2f1r5t5.apps.googleusercontent.com</string>
+</resources>
