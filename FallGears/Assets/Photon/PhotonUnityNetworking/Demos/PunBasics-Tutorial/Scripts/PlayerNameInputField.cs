@@ -10,6 +10,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using Firebase.Auth;
 
 namespace Photon.Pun.Demo.PunBasics
 {

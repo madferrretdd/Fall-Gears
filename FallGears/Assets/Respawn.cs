@@ -66,7 +66,7 @@ public class Respawn : MonoBehaviour
             GetComponent<SphereCollider>().enabled = false;
 
             //Photon.Pun.Demo.PunBasics.GameManager.Instance.LeaveRoom();
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
             //PhotonNetwork.LeaveRoom(true);
 
             destroyable.SetActive(false);
