@@ -3,6 +3,7 @@ using Photon.Realtime;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Firebase.Auth;
 
 namespace Photon.Pun.Demo.Asteroids
 {
@@ -50,7 +51,7 @@ namespace Photon.Pun.Demo.Asteroids
             cachedRoomList = new Dictionary<string, RoomInfo>();
             roomListEntries = new Dictionary<string, GameObject>();
             
-            PlayerNameInput.text = "Player " + Random.Range(1000, 10000);
+            PlayerNameInput.text = FirebaseAuth.DefaultInstance.CurrentUser.DisplayName.ToString();
         }
 
         #endregion

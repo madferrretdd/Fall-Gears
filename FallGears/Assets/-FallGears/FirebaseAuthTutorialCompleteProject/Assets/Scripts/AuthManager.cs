@@ -53,6 +53,18 @@ public class AuthManager : MonoBehaviour
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
+        AutoLogin();
+    }
+
+    public void AutoLogin()
+    {
+
+        if (auth.CurrentUser != null)
+        {
+            Debug.Log("skip login load scene");
+            SceneManager.LoadScene(1);
+        }
+
     }
 
     //Function for the login button

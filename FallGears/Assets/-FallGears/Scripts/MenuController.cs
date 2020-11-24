@@ -1,10 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Firebase.Auth;
 
 public class MenuController : MonoBehaviour
 {
     public AvatarHomeScreen AvatarHomeScreen;
+    public TMP_Text Username;
+
+    private void Start()
+    {
+        Username.text = FirebaseAuth.DefaultInstance.CurrentUser.DisplayName.ToString();
+    }
     public void OnClickCharacterPick(int whichCharacter)
     {
         if(PlayerInfo.PI != null)

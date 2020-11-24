@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1787826167488078171}
   - component: {fileID: -6467911798539641624}
+  - component: {fileID: 6597979785565937548}
   m_Layer: 0
   m_Name: A.2
   m_TagString: Untagged
@@ -63,6 +64,166 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &6597979785565937548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8234268025193167740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe91dc294731a9428c0941ea7579110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawingMode: 1
+  outlineLayer: 30
+  outlineTargets:
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 8544802940689115898}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 6042554852380684123}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 6042554852964605492}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 6042554852489017592}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 6042554853211235062}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 7563750272998090714}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 5576646002628978536}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 131863935399109308}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 2985432299632036970}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    Renderer: {fileID: 7667398480344721296}
+    SubmeshIndex: 0
+    ForceRecalculateBounds: 0
+    CutoutDescriptionType: 0
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  renderStyle: 1
+  outlineParameters:
+    enabled: 1
+    color: {r: 0, g: 0, b: 0, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  backParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  frontParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
 --- !u!1001 &873742604432337600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +338,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645288f8927bb124d83a0779ca75f9ae, type: 3}
+--- !u!23 &2985432299632036970 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 873742604432337600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2985432299632036968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2688168074663421608, guid: 645288f8927bb124d83a0779ca75f9ae,
@@ -297,6 +464,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645288f8927bb124d83a0779ca75f9ae, type: 3}
+--- !u!23 &131863935399109308 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 2637476692351632406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &131863935399109310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2688168074663421608, guid: 645288f8927bb124d83a0779ca75f9ae,
@@ -423,6 +596,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5600679493737595248}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &7563750272998090714 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 5600679493737595248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5703343646851121466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -540,6 +719,12 @@ PrefabInstance:
 --- !u!4 &7667398480344721298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2688168074663421608, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 5703343646851121466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7667398480344721296 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
     type: 3}
   m_PrefabInstance: {fileID: 5703343646851121466}
   m_PrefabAsset: {fileID: 0}
@@ -663,6 +848,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6042554852006366288}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &8544802940689115898 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 6042554852006366288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7505938590121492930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -780,6 +971,12 @@ PrefabInstance:
 --- !u!4 &5576646002628978538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2688168074663421608, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 7505938590121492930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5576646002628978536 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
     type: 3}
   m_PrefabInstance: {fileID: 7505938590121492930}
   m_PrefabAsset: {fileID: 0}
@@ -903,6 +1100,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8544802940449016305}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &6042554852380684123 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 8544802940449016305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8544802940575047250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1017,6 +1220,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645288f8927bb124d83a0779ca75f9ae, type: 3}
+--- !u!23 &6042554852489017592 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 8544802940575047250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6042554852489017594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2688168074663421608, guid: 645288f8927bb124d83a0779ca75f9ae,
@@ -1137,6 +1346,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645288f8927bb124d83a0779ca75f9ae, type: 3}
+--- !u!23 &6042554852964605492 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 8544802941035313310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6042554852964605494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2688168074663421608, guid: 645288f8927bb124d83a0779ca75f9ae,
@@ -1257,6 +1472,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645288f8927bb124d83a0779ca75f9ae, type: 3}
+--- !u!23 &6042554853211235062 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2688168074663421610, guid: 645288f8927bb124d83a0779ca75f9ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 8544802941900162140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6042554853211235060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2688168074663421608, guid: 645288f8927bb124d83a0779ca75f9ae,

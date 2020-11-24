@@ -177,7 +177,7 @@ namespace Photon.Pun.Demo.PunBasics
 		/// </summary>
 		public override void OnLeftRoom()
 		{
-			SceneManager.LoadScene(0);
+			SceneManager.LoadScene(1);
 		}
 
 		#endregion
@@ -187,10 +187,7 @@ namespace Photon.Pun.Demo.PunBasics
 		public void LeaveRoom()
 		{
             PhotonNetwork.Disconnect();
-            //SceneManager.LoadScene(0);
-            //OnLeftRoom();
-            //PhotonNetwork.LoadLevel(0);
-            //PhotonNetwork.JoinLobby();
+
         }
 
 		public void QuitApplication()
