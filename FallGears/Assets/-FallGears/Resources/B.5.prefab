@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8016910279886340797}
   - component: {fileID: 7927770386053727240}
   - component: {fileID: 6373632505317361959}
+  - component: {fileID: 3145929633981862505}
   m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
@@ -93,6 +94,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3145929633981862505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431850118167617944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &2688168074663421609
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +440,7 @@ GameObject:
   - component: {fileID: 1989789802070666902}
   - component: {fileID: 2020011721551373377}
   - component: {fileID: 2586242975310290428}
+  - component: {fileID: 4070401517691920073}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -497,6 +522,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4070401517691920073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873054360468204342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &3187157175764298968
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +557,7 @@ GameObject:
   - component: {fileID: 5161484138994110522}
   - component: {fileID: 4946498040661827176}
   - component: {fileID: 7966673120024988757}
+  - component: {fileID: 9208832704642002834}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -590,6 +639,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9208832704642002834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187157175764298968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
 --- !u!1 &4003931277544139329
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +667,7 @@ GameObject:
   - component: {fileID: 2141465207557089430}
   - component: {fileID: 4365619365419071851}
   - component: {fileID: 1234287228304868315}
+  - component: {fileID: 6662786587473892131}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -683,6 +749,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6662786587473892131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003931277544139329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &4055928715922884423
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +784,7 @@ GameObject:
   - component: {fileID: 2833928974488899889}
   - component: {fileID: 5032761022363274157}
   - component: {fileID: 3975686547403404948}
+  - component: {fileID: 4229222574875616483}
   m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
@@ -776,6 +866,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4229222574875616483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4055928715922884423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &4545912136145036095
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +901,7 @@ GameObject:
   - component: {fileID: 674098732690894134}
   - component: {fileID: 1184105453376618858}
   - component: {fileID: 256882034593169600}
+  - component: {fileID: 5507014636977582877}
   m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Untagged
@@ -869,6 +983,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5507014636977582877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4545912136145036095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &4546982978715650680
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +1018,7 @@ GameObject:
   - component: {fileID: 4970679451566141325}
   - component: {fileID: 3660688365476170295}
   - component: {fileID: 5101850237697418257}
+  - component: {fileID: 4218997221056326929}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -962,6 +1100,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4218997221056326929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546982978715650680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &4878430784075060751
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +1135,7 @@ GameObject:
   - component: {fileID: 2519981182218911862}
   - component: {fileID: 1310214358842139412}
   - component: {fileID: 1897913018239291033}
+  - component: {fileID: 7538762156262228463}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -1055,6 +1217,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7538762156262228463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4878430784075060751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &5115048192849442995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1252,7 @@ GameObject:
   - component: {fileID: 6266145527988954789}
   - component: {fileID: 4940812721267887262}
   - component: {fileID: 7564842552232911244}
+  - component: {fileID: 6448741810972647365}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -1148,6 +1334,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6448741810972647365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5115048192849442995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
 --- !u!1 &5976099096774194196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1362,7 @@ GameObject:
   - component: {fileID: 6474834417416525347}
   - component: {fileID: 5775567709940941812}
   - component: {fileID: 6861502794244232570}
+  - component: {fileID: 309506044951579341}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1241,6 +1444,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &309506044951579341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5976099096774194196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &6742539258704919339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,6 +1479,7 @@ GameObject:
   - component: {fileID: 5710722897212758231}
   - component: {fileID: 28459127734987574}
   - component: {fileID: 5532675173893874543}
+  - component: {fileID: 807598333835830935}
   m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -1334,6 +1561,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &807598333835830935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742539258704919339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &7375066967886557394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,6 +1596,7 @@ GameObject:
   - component: {fileID: 5222654876944199629}
   - component: {fileID: 52310342607435046}
   - component: {fileID: 2382482716869362304}
+  - component: {fileID: 4313992389791582533}
   m_Layer: 0
   m_Name: Cube (14)
   m_TagString: Untagged
@@ -1427,6 +1678,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4313992389791582533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7375066967886557394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
 --- !u!1 &7781853295111727684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1706,7 @@ GameObject:
   - component: {fileID: 5264183505926779950}
   - component: {fileID: 102901752228565568}
   - component: {fileID: 934331865214935381}
+  - component: {fileID: 3894013755326199918}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -1520,6 +1788,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3894013755326199918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781853295111727684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &8260650493082147018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1823,7 @@ GameObject:
   - component: {fileID: 3987689572888037345}
   - component: {fileID: 7870968103068732166}
   - component: {fileID: 1367807187205331602}
+  - component: {fileID: 1186984379159378595}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -1613,6 +1905,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1186984379159378595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260650493082147018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
 --- !u!1 &8351928793301558867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1940,7 @@ GameObject:
   - component: {fileID: 8044454787841703067}
   - component: {fileID: 4514302654195980710}
   - component: {fileID: 7858065494693779377}
+  - component: {fileID: 9028677938893825523}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1706,6 +2022,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9028677938893825523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351928793301558867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
 --- !u!1 &8781420758584160644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +2050,7 @@ GameObject:
   - component: {fileID: 6545629422301863880}
   - component: {fileID: 4068165053916861571}
   - component: {fileID: 1233107273734829820}
+  - component: {fileID: 6057425807337692736}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -1799,3 +2132,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6057425807337692736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781420758584160644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liGoSpawn:
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 9a37d182db6b88845a5c2cfbe25f7d86, type: 3}
+  - {fileID: 8378927804765202439, guid: 2fdd3c5913d4e4948b1d20e3db05b056, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}
+  - {fileID: 8378927804765202439, guid: 56fae95581589d846bc0c92a1827b400, type: 3}

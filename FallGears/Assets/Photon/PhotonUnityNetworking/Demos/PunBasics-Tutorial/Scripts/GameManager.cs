@@ -69,7 +69,7 @@ namespace Photon.Pun.Demo.PunBasics
             if (PhotonNetwork.IsMasterClient)
             {
                  PhotonNetwork.Instantiate(LevelGen.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
-
+                PhotonNetwork.Instantiate(LevelGen.name, new Vector3(0, 0, 150), Quaternion.identity, 0);
                 Debug.Log("This is Master");
                 PhotonNetwork.Instantiate(ColorPalletes.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
             }
@@ -99,7 +99,15 @@ namespace Photon.Pun.Demo.PunBasics
                     SpawnPoint = Random.Range(0, SpawnPoints.Length);
                     //Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                    PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoints[SpawnPoint].transform.position, Quaternion.identity, 0);
+                    if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("-Race"))
+                    {
+                        PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoints[SpawnPoint].transform.position, Quaternion.identity, 0);
+                    }
+                    if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("-WinScene"))
+                    {
+                        PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoints[SpawnPoint].transform.position, Quaternion.identity, 0);
+                    }
+
 
 
                 }
@@ -209,7 +217,8 @@ namespace Photon.Pun.Demo.PunBasics
             else
             {
             PhotonNetwork.Instantiate(LevelGen.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
-            PhotonNetwork.Instantiate(ColorPalletes.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
+               
+                PhotonNetwork.Instantiate(ColorPalletes.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
             }
 			//Debug.LogFormat( "PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount );
             

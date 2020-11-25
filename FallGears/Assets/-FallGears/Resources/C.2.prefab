@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 8378927804765202436}
   - component: {fileID: 8378927804765202437}
   - component: {fileID: -2992583232756762007}
-  - component: {fileID: 568934898210907255}
   - component: {fileID: -7308052947069957726}
+  - component: {fileID: -3274604363192105552}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: C.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8378927804765202439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.5, y: 12, z: -8}
-  m_LocalScale: {x: 30, y: 1, z: 30}
+  m_LocalScale: {x: 7.5, y: 1, z: 7.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,21 +118,6 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &568934898210907255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8378927804765202439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 309ed2ff1d72736419d72297f72543be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  liGoSpawn:
-  - {fileID: 7570534069382311522, guid: f1189eadf5d2e954c87ac91b47788e99, type: 3}
-  - {fileID: 3830622579643077198, guid: ddc018ee4f80e2b42a9788c86a71ca2a, type: 3}
 --- !u!114 &-7308052947069957726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,3 +170,16 @@ MonoBehaviour:
     fillPass:
       shader: {fileID: 0}
       serializedProperties: []
+--- !u!114 &-3274604363192105552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378927804765202439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c30a4aed29ed444e93669f59ed63469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatStrength: 1

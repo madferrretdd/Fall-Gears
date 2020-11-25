@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StartFinishMat
-  m_Shader: {fileID: -6465566751694194690, guid: 4aa46d33b0afb5e49bb0703218e42e0e,
+  m_Name: Cracked
+  m_Shader: {fileID: -6465566751694194690, guid: 30fa68ce467463643a86b839ca0eb195,
     type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 4
@@ -34,10 +34,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_66F4ED44:
-        m_Texture: {fileID: 2800000, guid: 19411eb98f09bed45a3dad1b09d55c13, type: 3}
+        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BASE_COLOR_MAP:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -57,7 +61,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EMISSION_COLOR_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _METALNESS_MAP:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -69,11 +81,31 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NORMAL_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OPACITY_MAP:
+        m_Texture: {fileID: 2800000, guid: 34f556d724b1bbf4097ca6220db2c581, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SPECULAR_COLOR_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SPECULAR_IOR_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SPECULAR_ROUGHNESS_MAP:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -94,10 +126,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_38BD3441: 1
-    - Vector1_CF8B0D8D: 8
-    - Vector1_ED5ABFD9: 0.05
-    - Vector1_F3F6B787: 0.4
+    - Vector1_38BD3441: 0
+    - Vector1_CF8B0D8D: 9.69
+    - Vector1_ED5ABFD9: 0.1024
+    - Vector1_F3F6B787: -1
     - _AlphaClip: 0
     - _Anisotropy: 0
     - _Blend: 0
@@ -117,11 +149,15 @@ Material:
     - _Glossiness: 0
     - _GlossinessSource: 0
     - _GlossyReflections: 0
+    - _METALNESS: 0
     - _Metallic: 0
+    - _OPACITY: 0.313
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionSteps: 16
+    - _SPECULAR_IOR: 1.47
+    - _SPECULAR_ROUGHNESS: 0
     - _Shininess: 0
     - _Smoothness: 0.892
     - _SmoothnessSource: 0
@@ -134,11 +170,14 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_28180829: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
+    - Color_28180829: {r: 0.31764707, g: 0.31764707, b: 0.31764707, a: 1}
     - Color_57D43A16: {r: 0.95283014, g: 0.95283014, b: 0.95283014, a: 0}
-    - Color_F689E8B9: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - Color_F689E8B9: {r: 0.3803922, g: 0.47450984, b: 0.6431373, a: 1}
+    - _BASE_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.9960785, g: 0.45098042, b: 0.32156864, a: 1}
+    - _EMISSION_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0.039546248, g: 0.039546248, b: 0.039546248, a: 1}
+    - _SPECULAR_COLOR: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
