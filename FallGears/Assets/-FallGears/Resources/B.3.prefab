@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawingMode: 1
-  outlineLayer: 30
+  outlineLayer: 31
   outlineTargets:
   - edgeDilateAmount: 5
     frontEdgeDilateAmount: 5
