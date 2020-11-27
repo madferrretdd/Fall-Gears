@@ -53,7 +53,7 @@ public class AuthManager : MonoBehaviour
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
-        AutoLogin();
+        //AutoLogin();
     }
 
     public void AutoLogin()

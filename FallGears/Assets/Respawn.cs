@@ -29,7 +29,7 @@ public class Respawn : MonoBehaviour
         
         vehicleModel = AvatarParent.GetComponentInParent<AvatarSetup>().myCharacter;
         UIStuff = vehicleModel.GetComponentInChildren<MobileControls>();
-
+        UIStuff.enabled = true;
     }
 
     public void OnCollisionEnter(Collision other)
@@ -78,6 +78,7 @@ public class Respawn : MonoBehaviour
             UIStuff.ReleaseButton("brake");
             UIStuff.ReleaseButton("left");
             UIStuff.ReleaseButton("right");
+            UIStuff.enabled = false;
         }
 
     }
