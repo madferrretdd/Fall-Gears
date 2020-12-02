@@ -14,6 +14,10 @@ using UnityEngine.SceneManagement;
 using Photon.Realtime;
 using System.Collections.Generic;
 
+using Firebase;
+using Firebase.Auth;
+using Firebase.Database;
+
 namespace Photon.Pun.Demo.PunBasics
 {
 #pragma warning disable 649
@@ -30,9 +34,8 @@ namespace Photon.Pun.Demo.PunBasics
 		#region Public Fields
       
 		static public GameManager Instance;
-
-        #endregion
-
+       
+        #endregion 
         #region Private Fields
         [Header("Vehicles")]
         private GameObject instance;
@@ -107,8 +110,6 @@ namespace Photon.Pun.Demo.PunBasics
                     {
                         PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoints[SpawnPoint].transform.position, Quaternion.identity, 0);
                     }
-
-
 
                 }
                 else

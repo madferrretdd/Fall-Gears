@@ -40,6 +40,7 @@ namespace Photon.Pun.Demo.PunBasics
         [Tooltip("The Beams GameObject to control")]
         [SerializeField]
         private GameObject beams;
+        public int Position;
 
         //True, when the user is firing
         bool IsFiring;

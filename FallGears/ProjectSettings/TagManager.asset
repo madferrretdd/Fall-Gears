@@ -8,6 +8,13 @@ TagManager:
   - Delete
   - Win
   - Playya
+  - WinsTxt
+  - CompletedTxt
+  - AuthTag
+  - PlayerInfTag
+  - second
+  - third
+  - fourth
   layers:
   - Default
   - TransparentFX

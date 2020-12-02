@@ -2,6 +2,8 @@
 using UnityEngine;
 using Firebase;
 using Firebase.Auth;
+using Firebase.Database;
+using Firebase.Unity.Editor;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -10,7 +12,7 @@ public class AuthManager : MonoBehaviour
     //Firebase variables
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
-    public FirebaseAuth auth;    
+    public FirebaseAuth auth;
     public FirebaseUser User;
     public int RegisteredUsers;
 
@@ -29,8 +31,20 @@ public class AuthManager : MonoBehaviour
     public TMP_InputField passwordRegisterVerifyField;
     public TMP_Text warningRegisterText;
 
+    //Database variables
+    [Header("Database Variables")]
+    public int Wins = 0;
+    public int Completed = 0;
+    public int Experience = 0;
+    public int GearTokens = 0;
+
+    public DatabaseReference reference;
+
+
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
+
         //Check that all of the necessary dependencies for Firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
@@ -44,7 +58,10 @@ public class AuthManager : MonoBehaviour
             {
                 Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
             }
+            
         });
+
+        //Get database UI in Game Scene
     }
 
 
@@ -54,6 +71,10 @@ public class AuthManager : MonoBehaviour
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
         //AutoLogin();
+        //Database
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://fallgears.firebaseio.com/");
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        
     }
 
     public void AutoLogin()
@@ -72,6 +93,7 @@ public class AuthManager : MonoBehaviour
     {
         //Call the login coroutine passing the email and password
         StartCoroutine(Login(emailLoginField.text, passwordLoginField.text));
+        
     }
     //Function for the register button
     public void RegisterButton()
@@ -124,7 +146,77 @@ public class AuthManager : MonoBehaviour
             warningLoginText.text = "";
             confirmLoginText.text = "Logged In";
             SceneManager.LoadScene(1);
+
+            //db
+            reference.Child("Users").Child(User.UserId).Child("Online").SetValueAsync(true);
+            reference.Child("Users").Child(User.UserId).Child("Username").SetValueAsync(User.DisplayName);
+
+            getFromDB();
+
         }
+    }
+
+    public void getFromDB()
+    {
+        //Gets Total Wins
+        reference.Child("Users").Child(User.UserId).Child("Wins").GetValueAsync().ContinueWith(task =>
+            {
+                if (task.IsFaulted)
+                {
+                    Debug.Log("wins fault");
+                }
+                else if (task.IsCompleted)
+                {
+                    DataSnapshot snapshot = task.Result;
+                    Debug.Log("Snapshot:" + snapshot);
+                    Wins = int.Parse(snapshot.GetValue(true).ToString());
+                }
+            });
+
+        //Gets Total Races Complete
+        reference.Child("Users").Child(User.UserId).Child("Completed").GetValueAsync().ContinueWith(task =>
+            {
+                if (task.IsFaulted)
+                {
+                    Debug.Log("Completed fault");
+                }
+                else if (task.IsCompleted)
+                {
+                    DataSnapshot snapshot = task.Result;
+                    Debug.Log("Snapshot:" + snapshot);
+                    Completed = int.Parse(snapshot.GetValue(true).ToString());
+                }
+            });
+
+        //Gets Experiance
+        reference.Child("Users").Child(User.UserId).Child("Experience").GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsFaulted)
+            {
+                Debug.Log("XP fault");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                Debug.Log("Snapshot:" + snapshot);
+                Experience = int.Parse(snapshot.GetValue(true).ToString());
+            }
+        });
+
+        //Gets Tokens
+        reference.Child("Users").Child(User.UserId).Child("GearTokens").GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsFaulted)
+            {
+                Debug.Log("Tokens fault");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                Debug.Log("GearTokens =" + snapshot.Value.ToString());
+                GearTokens = int.Parse(snapshot.GetValue(true).ToString());
+            }
+        });
     }
 
     private IEnumerator Register(string _email, string _password, string _username)
@@ -134,12 +226,12 @@ public class AuthManager : MonoBehaviour
             //If the username field is blank show a warning
             warningRegisterText.text = "Missing Username";
         }
-        else if(passwordRegisterField.text != passwordRegisterVerifyField.text)
+        else if (passwordRegisterField.text != passwordRegisterVerifyField.text)
         {
             //If the password does not match show a warning
             warningRegisterText.text = "Password Does Not Match!";
         }
-        else 
+        else
         {
             //Call the Firebase auth signin function passing the email and password
             var RegisterTask = auth.CreateUserWithEmailAndPasswordAsync(_email, _password);
@@ -180,7 +272,7 @@ public class AuthManager : MonoBehaviour
                 if (User != null)
                 {
                     //Create a user profile and set the username
-                    UserProfile profile = new UserProfile{DisplayName = _username};
+                    UserProfile profile = new UserProfile { DisplayName = _username };
 
                     //Call the Firebase auth update user profile function passing the profile with the username
                     var ProfileTask = User.UpdateUserProfileAsync(profile);
@@ -201,9 +293,34 @@ public class AuthManager : MonoBehaviour
                         //Now return to login screen
                         UIManager.instance.LoginScreen();
                         warningRegisterText.text = "";
+                        
+                                reference.Child("Users").Child(User.UserId).Child("Wins").SetValueAsync(0);
+
+                                reference.Child("Users").Child(User.UserId).Child("Experience").SetValueAsync(0);
+
+                                reference.Child("Users").Child(User.UserId).Child("Completed").SetValueAsync(0);
+      
+                                reference.Child("Users").Child(User.UserId).Child("GearTokens").SetValueAsync(0);
+                        
+
                     }
                 }
             }
         }
+    }
+
+    public void AuthManager_ValueChanged(object sender, ValueChangedEventArgs e)
+    {
+        if (e.DatabaseError != null)
+        {
+            Debug.LogError(e.DatabaseError.Message);
+            return;
+        }
+        reference.OnDisconnect();
+        {
+            reference.Child("Users").Child(User.UserId).Child("Online").SetValueAsync(false);
+        }
+
+        Wins = int.Parse(e.Snapshot.Child(User.UserId).Child("Wins").GetValue(true).ToString());
     }
 }
