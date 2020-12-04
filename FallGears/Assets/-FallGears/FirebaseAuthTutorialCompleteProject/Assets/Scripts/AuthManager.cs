@@ -170,7 +170,7 @@ public class AuthManager : MonoBehaviour
                 else if (task.IsCompleted)
                 {
                     DataSnapshot snapshot = task.Result;
-                    Debug.Log("Snapshot:" + snapshot);
+                    //Debug.Log("Snapshot:" + snapshot);
                     Wins = int.Parse(snapshot.GetValue(true).ToString());
                 }
             });
@@ -185,7 +185,7 @@ public class AuthManager : MonoBehaviour
                 else if (task.IsCompleted)
                 {
                     DataSnapshot snapshot = task.Result;
-                    Debug.Log("Snapshot:" + snapshot);
+                    //Debug.Log("Snapshot:" + snapshot);
                     Completed = int.Parse(snapshot.GetValue(true).ToString());
                 }
             });
@@ -200,7 +200,7 @@ public class AuthManager : MonoBehaviour
             else if (task.IsCompleted)
             {
                 DataSnapshot snapshot = task.Result;
-                Debug.Log("Snapshot:" + snapshot);
+                //Debug.Log("Snapshot:" + snapshot);
                 Experience = int.Parse(snapshot.GetValue(true).ToString());
             }
         });
@@ -215,7 +215,7 @@ public class AuthManager : MonoBehaviour
             else if (task.IsCompleted)
             {
                 DataSnapshot snapshot = task.Result;
-                Debug.Log("GearTokens =" + snapshot.Value.ToString());
+                //Debug.Log("GearTokens =" + snapshot.Value.ToString());
                 GearTokens = int.Parse(snapshot.GetValue(true).ToString());
             }
         });

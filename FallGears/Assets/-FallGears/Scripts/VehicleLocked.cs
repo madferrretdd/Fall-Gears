@@ -5,6 +5,7 @@ using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
 using UnityEngine.UI;
+using TMPro;
 
 public class VehicleLocked : MonoBehaviour
 {
@@ -19,35 +20,24 @@ public class VehicleLocked : MonoBehaviour
     public int price;
     public int Tokens;
 
+    public TMP_Text PriceText;
+
     private void Start()
     {
+
+        
+        
+        InvokeRepeating("check", 0, 1);
+    }
+
+    public void check()
+        {
         authManager = GameObject.FindWithTag("AuthTag").GetComponent<AuthManager>();
         playerInfo = GameObject.FindWithTag("PlayerInfTag").GetComponent<PlayerInfo>();
-        unlockcheck();
+        allUpdate();
+        getUnlocked();
+        }
 
-
-        //Gets Vehicles
-        authManager.reference.Child("Users").Child(authManager.User.UserId).Child(UnlockedButton.name).GetValueAsync().ContinueWith(task =>
-        {
-            if (task.IsFaulted)
-            {
-                Debug.Log("Vehicle fault");
-            }
-            else if (task.IsCompleted)
-            {
-                
-                DataSnapshot snapshot = task.Result;
-                Debug.Log(snapshot.ToString());
-                if (snapshot.Value.ToString() == "True")
-                {
-                isLocked = false;
-                    InvokeRepeating("allUpdate", 0, 1);
-                allUpdate();
-                }
-                
-            }
-        });
-    }
 
     public void BuyItem()
     {
@@ -67,19 +57,51 @@ public class VehicleLocked : MonoBehaviour
         }
     }
 
-    public void allUpdate()
+    public void getUnlocked()
     {
-        playerInfo.UpdateUI();
-        authManager.getFromDB();
-        unlockcheck();
+        //Gets Vehicles
+        
+
+        authManager.reference.Child("Users").Child(authManager.User.UserId).Child(UnlockedButton.name).GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsFaulted)
+            {
+                Debug.Log("Vehicle fault");
+            }
+            else if (task.IsCompleted)
+            {
+
+                DataSnapshot snapshot = task.Result;
+                //Debug.Log(snapshot.ToString());
+                if (snapshot.Value.ToString() == "True")
+                {
+                    isLocked = false;
+                    allUpdate();
+                }
+
+            }
+        });
     }
 
-    public void unlockcheck()
+    public void allUpdate()
+    {        
+        
+
+        playerInfo.UpdateUI();
+        authManager.getFromDB();
+        //unlockcheck();
+    }
+
+    public void Update()
     {
+
+
         if (isLocked == true)
         {
             LockedButton.SetActive(true);
             UnlockedButton.SetActive(false);
+            string cog = "cog-icon";
+             PriceText.text = "<sprite name=" + cog + ">" + price;
         }
         else if (isLocked == false)
         {
