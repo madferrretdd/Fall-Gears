@@ -24,7 +24,7 @@ public class Vehicle : MonoBehaviour{
 	
 	[Header("Parameters")]
 	
-	[Range(5.0f, 40.0f)] public float acceleration = 30f;
+	[Range(0.0f, 40.0f)] public float acceleration = 30f;
 	[Range(20.0f, 160.0f)] public float steering = 80f;
 	[Range(20f, 80f)] public float jumpForce = 50f;
 	[Range(0.0f, 20.0f)] public float gravity = 10f;

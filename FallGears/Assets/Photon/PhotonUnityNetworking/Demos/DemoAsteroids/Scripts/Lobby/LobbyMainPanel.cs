@@ -34,7 +34,7 @@ namespace Photon.Pun.Demo.Asteroids
 
         [Header("Inside Room Panel")]
         public GameObject InsideRoomPanel;
-
+        public int minPlayers;
         public Button StartGameButton;
         public GameObject PlayerListEntryPrefab;
 
@@ -213,7 +213,7 @@ namespace Photon.Pun.Demo.Asteroids
 
             byte maxPlayers;
             byte.TryParse(MaxPlayersInputField.text, out maxPlayers);
-            maxPlayers = (byte) Mathf.Clamp(maxPlayers, 2, 8);
+            maxPlayers = (byte) Mathf.Clamp(maxPlayers, 2, 4);
 
             RoomOptions options = new RoomOptions {MaxPlayers = maxPlayers, PlayerTtl = 10000 };
 
@@ -270,6 +270,8 @@ namespace Photon.Pun.Demo.Asteroids
 
         private bool CheckPlayersReady()
         {
+
+            //Debug.Log(PhotonNetwork.CountOfPlayersInRooms);
             if (!PhotonNetwork.IsMasterClient)
             {
                 return false;
@@ -289,6 +291,11 @@ namespace Photon.Pun.Demo.Asteroids
                 {
                     return false;
                 }
+            }
+
+            if (PhotonNetwork.CurrentRoom.PlayerCount < minPlayers)
+            {
+                return false;
             }
 
             return true;

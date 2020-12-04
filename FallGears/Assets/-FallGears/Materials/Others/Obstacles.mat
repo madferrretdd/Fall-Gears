@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Primary
+  m_Name: Obstacles
   m_Shader: {fileID: -6465566751694194690, guid: 4aa46d33b0afb5e49bb0703218e42e0e,
     type: 3}
   m_ShaderKeywords: 
@@ -74,10 +74,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_38BD3441: 1
+    - Vector1_38BD3441: 0.4
     - Vector1_CF8B0D8D: 6
-    - Vector1_ED5ABFD9: 0
-    - Vector1_F3F6B787: 0.4
+    - Vector1_ED5ABFD9: 0.093
+    - Vector1_F3F6B787: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -104,10 +104,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_28180829: {r: 0.09077964, g: 0.14010161, b: 0.2264151, a: 0}
-    - Color_57D43A16: {r: 0.3019608, g: 0.37647063, b: 0.50980395, a: 0}
-    - Color_F689E8B9: {r: 0.16078432, g: 0.22352943, b: 0.33333334, a: 1}
-    - _BaseColor: {r: 0.16078432, g: 0.22352943, b: 0.33333334, a: 1}
-    - _Color: {r: 0.21960786, g: 0.74509805, b: 0.7176471, a: 1}
+    - Color_28180829: {r: 0.6509434, g: 0.23028658, b: 0.41537562, a: 0}
+    - Color_57D43A16: {r: 0.990566, g: 0.630785, b: 0.78908867, a: 0}
+    - Color_F689E8B9: {r: 0.909804, g: 0.41960785, b: 0.63529414, a: 1}
+    - _BaseColor: {r: 0.83921576, g: 0.8588236, b: 0.91372555, a: 1}
+    - _Color: {r: 0.9960785, g: 0.45098042, b: 0.32156864, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

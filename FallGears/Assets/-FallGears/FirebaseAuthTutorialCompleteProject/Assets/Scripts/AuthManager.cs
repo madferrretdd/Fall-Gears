@@ -40,6 +40,7 @@ public class AuthManager : MonoBehaviour
 
     public DatabaseReference reference;
 
+    public GameObject VehicleList;
 
     void Start()
     {
@@ -61,6 +62,7 @@ public class AuthManager : MonoBehaviour
             
         });
 
+        
         //Get database UI in Game Scene
     }
 
@@ -217,6 +219,8 @@ public class AuthManager : MonoBehaviour
                 GearTokens = int.Parse(snapshot.GetValue(true).ToString());
             }
         });
+
+
     }
 
     private IEnumerator Register(string _email, string _password, string _username)
@@ -301,7 +305,6 @@ public class AuthManager : MonoBehaviour
                                 reference.Child("Users").Child(User.UserId).Child("Completed").SetValueAsync(0);
       
                                 reference.Child("Users").Child(User.UserId).Child("GearTokens").SetValueAsync(0);
-                        
 
                     }
                 }

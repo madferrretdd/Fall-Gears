@@ -24,12 +24,27 @@ public class Respawn : MonoBehaviour
 
     private void Start()
     {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("-WinScene"))
+        {
+            destroyable.SetActive(true);
+            GetComponent<SphereCollider>().enabled = true;
+
+            UIStuff = destroyable.GetComponentInChildren<MobileControls>();
+            UIStuff.vehicle.acceleration = 0;
+            UIStuff.ReleaseButton("accelerate");
+            UIStuff.ReleaseButton("brake");
+            UIStuff.ReleaseButton("left");
+            UIStuff.ReleaseButton("right");
+            UIStuff.enabled = enabled;
+        }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("-Race"))
+        {
+            vehicleModel = AvatarParent.GetComponentInParent<AvatarSetup>().myCharacter;
+            UIStuff = vehicleModel.GetComponentInChildren<MobileControls>();
+            UIStuff.enabled = true;
+        }
         
-        //Wins = PlayerPrefs.GetInt("Wins");
-        
-        vehicleModel = AvatarParent.GetComponentInParent<AvatarSetup>().myCharacter;
-        UIStuff = vehicleModel.GetComponentInChildren<MobileControls>();
-        UIStuff.enabled = true;
     }
 
     public void OnCollisionEnter(Collision other)
@@ -55,124 +70,115 @@ public class Respawn : MonoBehaviour
 
         if (other.collider.tag == "Win")
         {
-            
+            PlayerPrefs.SetInt("PlayerPos", 0);
             authManager = GameObject.FindWithTag("AuthTag").GetComponent<AuthManager>();
+
+            //Player Won The Race add 1 to wins
+            authManager.Wins++;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Wins").SetValueAsync(authManager.Wins);
+
+            //Player Gets 10 Coins for Winning the race
+            authManager.GearTokens = authManager.GearTokens +10;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("GearTokens").SetValueAsync(authManager.GearTokens);
+
+            //Player Also Completed the Race add 1 to completed
             authManager.Completed++;
             authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Completed").SetValueAsync(authManager.Completed);
-            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("position").SetValueAsync(1);
-            coroutine = Explode(0f);
-            StartCoroutine(coroutine);
+
+            //plus 1 gear token for completing the race
+            authManager.GearTokens++;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("GearTokens").SetValueAsync(authManager.GearTokens);
+
+            //Player Gets 10 Coins for Winning the race
+            authManager.Experience = authManager.Experience + 10;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Experience").SetValueAsync(authManager.Experience);
+
+            //Explode on contact with finishline
             Instantiate(Bang, transform.position, transform.rotation);
 
-            destroyable.SetActive(false);
-            GetComponent<SphereCollider>().enabled = false;
-
-            //Photon.Pun.Demo.PunBasics.GameManager.Instance.LeaveRoom();
+            //Load Winners scene (position should be fed to GameManager for instantiatingon podeum
             SceneManager.LoadScene(3);
-            //PhotonNetwork.LeaveRoom(true);
-
-            destroyable.SetActive(false);
-            GetComponent<SphereCollider>().enabled = false;
-
-            UIStuff = destroyable.GetComponentInChildren<MobileControls>();
-            //ar control = UIStuff.GetComponent<MobileControls>();
-            UIStuff.ReleaseButton("accelerate");
-            UIStuff.ReleaseButton("brake");
-            UIStuff.ReleaseButton("left");
-            UIStuff.ReleaseButton("right");
-            UIStuff.enabled = false;
+            
         }
 
         if (other.collider.tag == "second")
         {
-
+            PlayerPrefs.SetInt("PlayerPos", 1);
             authManager = GameObject.FindWithTag("AuthTag").GetComponent<AuthManager>();
+
+            //Player Gets 10 Coins for Winning the race
+            authManager.GearTokens = authManager.GearTokens + 5;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("GearTokens").SetValueAsync(authManager.GearTokens);
+
+            //Player Also Completed the Race add 1 to completed
             authManager.Completed++;
             authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Completed").SetValueAsync(authManager.Completed);
-            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("position").SetValueAsync(2);
-            coroutine = Explode(0f);
-            StartCoroutine(coroutine);
+
+            //plus 1 gear token for completing the race
+            authManager.GearTokens++;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("GearTokens").SetValueAsync(authManager.GearTokens);
+
+            //Player Gets 10 Coins for Winning the race
+            authManager.Experience = authManager.Experience + 5;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Experience").SetValueAsync(authManager.Experience);
+
+            //Explode on contact with finishline
             Instantiate(Bang, transform.position, transform.rotation);
 
-            destroyable.SetActive(false);
-            GetComponent<SphereCollider>().enabled = false;
-
-            //Photon.Pun.Demo.PunBasics.GameManager.Instance.LeaveRoom();
+            //Load Winners scene (position should be fed to GameManager for instantiatingon podeum
             SceneManager.LoadScene(3);
-            //PhotonNetwork.LeaveRoom(true);
-
-            destroyable.SetActive(false);
-            GetComponent<SphereCollider>().enabled = false;
-
-            UIStuff = destroyable.GetComponentInChildren<MobileControls>();
-            //ar control = UIStuff.GetComponent<MobileControls>();
-            UIStuff.ReleaseButton("accelerate");
-            UIStuff.ReleaseButton("brake");
-            UIStuff.ReleaseButton("left");
-            UIStuff.ReleaseButton("right");
-            UIStuff.enabled = false;
         }
 
         if (other.collider.tag == "third")
         {
-
+            PlayerPrefs.SetInt("PlayerPos", 2);
             authManager = GameObject.FindWithTag("AuthTag").GetComponent<AuthManager>();
+
+            //Player Gets 10 Coins for Winning the race
+            authManager.GearTokens = authManager.GearTokens + 2;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("GearTokens").SetValueAsync(authManager.GearTokens);
+
+            //Player Also Completed the Race add 1 to completed
             authManager.Completed++;
             authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Completed").SetValueAsync(authManager.Completed);
-            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("position").SetValueAsync(3);
-            coroutine = Explode(0f);
-            StartCoroutine(coroutine);
+
+            //plus 1 gear token for completing the race
+            authManager.GearTokens++;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("GearTokens").SetValueAsync(authManager.GearTokens);
+
+            //Player Gets 10 Coins for Winning the race
+            authManager.Experience = authManager.Experience + 2;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Experience").SetValueAsync(authManager.Experience);
+
+            //Explode on contact with finishline
             Instantiate(Bang, transform.position, transform.rotation);
 
-            destroyable.SetActive(false);
-            GetComponent<SphereCollider>().enabled = false;
-
-            //Photon.Pun.Demo.PunBasics.GameManager.Instance.LeaveRoom();
+            //Load Winners scene (position should be fed to GameManager for instantiatingon podeum
             SceneManager.LoadScene(3);
-            //PhotonNetwork.LeaveRoom(true);
-
-            destroyable.SetActive(false);
-            GetComponent<SphereCollider>().enabled = false;
-
-            UIStuff = destroyable.GetComponentInChildren<MobileControls>();
-            //ar control = UIStuff.GetComponent<MobileControls>();
-            UIStuff.ReleaseButton("accelerate");
-            UIStuff.ReleaseButton("brake");
-            UIStuff.ReleaseButton("left");
-            UIStuff.ReleaseButton("right");
-            UIStuff.enabled = false;
         }
 
         if (other.collider.tag == "fourth")
         {
-
+            PlayerPrefs.SetInt("PlayerPos", 3);
             authManager = GameObject.FindWithTag("AuthTag").GetComponent<AuthManager>();
+
+            //Player Also Completed the Race add 1 to completed
             authManager.Completed++;
-
             authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Completed").SetValueAsync(authManager.Completed);
-            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("position").SetValueAsync(4);
 
-            coroutine = Explode(0f);
-            StartCoroutine(coroutine);
+            //plus 1 gear token for completing the race
+            authManager.GearTokens++;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("GearTokens").SetValueAsync(authManager.GearTokens);
+
+            //Player Gets 10 Coins for Winning the race
+            authManager.Experience = authManager.Experience + 1;
+            authManager.reference.Child("Users").Child(authManager.User.UserId).Child("Experience").SetValueAsync(authManager.Experience);
+
+            //Explode on contact with finishline
             Instantiate(Bang, transform.position, transform.rotation);
 
-            destroyable.SetActive(false);
-            GetComponent<SphereCollider>().enabled = false;
-
-            //Photon.Pun.Demo.PunBasics.GameManager.Instance.LeaveRoom();
+            //Load Winners scene (position should be fed to GameManager for instantiatingon podeum
             SceneManager.LoadScene(3);
-            //PhotonNetwork.LeaveRoom(true);
-
-            destroyable.SetActive(false);
-            GetComponent<SphereCollider>().enabled = false;
-
-            UIStuff = destroyable.GetComponentInChildren<MobileControls>();
-            //ar control = UIStuff.GetComponent<MobileControls>();
-            UIStuff.ReleaseButton("accelerate");
-            UIStuff.ReleaseButton("brake");
-            UIStuff.ReleaseButton("left");
-            UIStuff.ReleaseButton("right");
-            UIStuff.enabled = false;
         }
 
     }
@@ -190,7 +196,7 @@ public class Respawn : MonoBehaviour
 
         transform.position = new Vector3(-12, 20, -28);
         destroyable.SetActive(true);
-        Instantiate(Pop, transform.position, transform.rotation);
+        Instantiate(Pop, transform.position, Quaternion.identity);
         GetComponent<SphereCollider>().enabled = true;
 
     }

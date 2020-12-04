@@ -547,6 +547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 176684, guid: b7fe671fa5d4d4772a4b20715fb9b0ff, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 476684, guid: b7fe671fa5d4d4772a4b20715fb9b0ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -775,7 +779,7 @@ GameObject:
   - component: {fileID: 123685787}
   m_Layer: 0
   m_Name: End (2)
-  m_TagString: Untagged
+  m_TagString: third
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -992,7 +996,7 @@ GameObject:
   - component: {fileID: 163105350}
   m_Layer: 0
   m_Name: End
-  m_TagString: Untagged
+  m_TagString: Win
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3002,7 +3006,7 @@ GameObject:
   - component: {fileID: 962163513}
   m_Layer: 0
   m_Name: End (1)
-  m_TagString: Untagged
+  m_TagString: second
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5477,7 +5481,7 @@ GameObject:
   - component: {fileID: 2064699833}
   m_Layer: 0
   m_Name: End (3)
-  m_TagString: Untagged
+  m_TagString: fourth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

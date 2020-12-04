@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
+using Photon.Pun.UtilityScripts;
 
 namespace Photon.Pun.Demo.PunBasics
 {
@@ -45,6 +46,7 @@ namespace Photon.Pun.Demo.PunBasics
         [Tooltip("Spawn Points")]
         public Transform[] SpawnPoints;
         int SpawnPoint = 0;
+        public int PlayerPos;
 
         [Tooltip("The prefab to use for representing the player")]
         [SerializeField]
@@ -66,12 +68,11 @@ namespace Photon.Pun.Demo.PunBasics
         /// </summary>
         void Start()
 		{
-            
             Debug.Log("Player List: " + PhotonNetwork.PlayerList + " --- " + "Current Room:" + PhotonNetwork.CurrentRoom + " ---- " + "Number of Rooms: " + PhotonNetwork.CountOfRooms);
             //DontDestroyOnLoad(gameObject);
             if (PhotonNetwork.IsMasterClient)
             {
-                 PhotonNetwork.Instantiate(LevelGen.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(LevelGen.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
                 PhotonNetwork.Instantiate(LevelGen.name, new Vector3(0, 0, 150), Quaternion.identity, 0);
                 Debug.Log("This is Master");
                 PhotonNetwork.Instantiate(ColorPalletes.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
@@ -104,11 +105,13 @@ namespace Photon.Pun.Demo.PunBasics
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
                     if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("-Race"))
                     {
-                        PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoints[SpawnPoint].transform.position, Quaternion.identity, 0);
+                        int startPos = PhotonNetwork.LocalPlayer.GetPlayerNumber();
+                        PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoints[startPos].transform.position, Quaternion.identity, 0);
                     }
                     if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("-WinScene"))
                     {
-                        PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoints[SpawnPoint].transform.position, Quaternion.identity, 0);
+                        PlayerPos = PlayerPrefs.GetInt("PlayerPos");
+                        PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoints[PlayerPos].transform.position, transform.rotation, 0);
                     }
 
                 }
@@ -202,7 +205,8 @@ namespace Photon.Pun.Demo.PunBasics
 		public void QuitApplication()
 		{
 			Application.Quit();
-		}
+            LeaveRoom();
+        }
 
 		#endregion
 
