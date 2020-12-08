@@ -1298,6 +1298,7 @@ MonoBehaviour:
   authManager: {fileID: 0}
   UIStuff: {fileID: 244535487809444399}
   roomdetails: {fileID: 2870277074599995025}
+  Strength: -1000
 --- !u!114 &7978152354604686017
 MonoBehaviour:
   m_ObjectHideFlags: 0

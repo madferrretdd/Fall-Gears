@@ -21,6 +21,8 @@ public class AvatarHomeScreen : MonoBehaviourPun
 
     public Texture[] TextureSelect;
 
+    public ParticleSystem Spray;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -56,7 +58,10 @@ public class AvatarHomeScreen : MonoBehaviourPun
     {
 
         colorValue = PI.mySelectedColor;
-
+        Material spraymat = Spray.GetComponent<Renderer>().material;
+        spraymat.SetColor("Color_F689E8B9", VehicleColor[PI.mySelectedColor]);
+        spraymat.SetColor("Color_28180829", VehicleColor[PI.mySelectedColor + 1]);
+        Spray.Play();
         //    if (this.photonView.IsMine)
         //{
 
@@ -75,7 +80,7 @@ public class AvatarHomeScreen : MonoBehaviourPun
                 {
 
                     // Debug.Log("Found Material and Replaced: " + mat.name );
-
+                    
                     mat.SetColor("Color_F689E8B9", VehicleColor[PI.mySelectedColor]);
                     mat.SetColor("Color_28180829", VehicleColor[PI.mySelectedColor + 1]);
 

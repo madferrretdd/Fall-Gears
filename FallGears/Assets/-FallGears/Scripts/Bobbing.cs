@@ -8,7 +8,7 @@ public class Bobbing : MonoBehaviour
     float originalY;
 
     public float floatStrength = 1; // You can change this in the Unity Editor to 
-                                    // change the range of y positions that are possible.
+    public float frequency = 1;      // change the range of y positions that are possible.
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class Bobbing : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(transform.position.x,
-            originalY + ((float)Math.Sin(Time.time) * floatStrength),
+            originalY + (((float)Math.Sin(Time.time)*frequency) * floatStrength),
             transform.position.z);
     }
 }

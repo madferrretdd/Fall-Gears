@@ -22,6 +22,8 @@ public class Respawn : MonoBehaviour
 
     public Text roomdetails;
 
+    public float Strength = 500f;
+
     private void Start()
     {
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("-WinScene"))
@@ -66,6 +68,12 @@ public class Respawn : MonoBehaviour
             UIStuff.ReleaseButton("right");
             
 
+        }
+
+        if (other.collider.tag == "Player")
+        {
+            Vector3 direction = (transform.position - other.transform.position).normalized;
+            other.rigidbody.AddForce(direction * Strength, ForceMode.Impulse);
         }
 
         if (other.collider.tag == "Win")

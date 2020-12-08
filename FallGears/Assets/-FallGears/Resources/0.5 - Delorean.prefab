@@ -13188,9 +13188,10 @@ MonoBehaviour:
   vehicleModel: {fileID: 0}
   destroyable: {fileID: 5375141744333731054}
   AvatarParent: {fileID: 1538509723524012422}
-  Wins: 0
+  authManager: {fileID: 0}
   UIStuff: {fileID: 9097087917660909951}
   roomdetails: {fileID: 5654665919142578826}
+  Strength: -1000
 --- !u!114 &5368944903908685948
 MonoBehaviour:
   m_ObjectHideFlags: 0
